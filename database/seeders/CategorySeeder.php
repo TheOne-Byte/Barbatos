@@ -15,17 +15,17 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('Category')->insert([
+        DB::table('categories')->insert([
             'name' => 'Rumah tangga'
         ]
         );
 
-        DB::table('Category')->insert([
+        DB::table('categories')->insert([
             'name' => 'Elektronik'
         ]
         );
 
-        DB::table('Category')->insert([
+        DB::table('categories')->insert([
             'name' => 'Buku'
         ]
         );

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Route::get('/', function () {
 Route::get('/Homepage', [HomepageController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'index']);
+
+Route::get('/ProductDetail', [ProductController::class, 'product_detail']);

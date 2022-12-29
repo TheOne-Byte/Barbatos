@@ -18,7 +18,7 @@ class TransactionSeeder extends Seeder
     DB::table('transactions')->insert([
         'product_id' => '1',
         'quantity'=>'2',
-        'sub_price'=>'Rp. 60.000'
+        'sub_price'=> 60000
     ]);
         //
     }
