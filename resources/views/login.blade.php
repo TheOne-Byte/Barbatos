@@ -7,7 +7,9 @@
   <div class="card">
     <div class="card-body py-5 px-md-5">
       <form>
-      <div class="text">Login</div>
+      <div class="text">
+        <h2>Login</h2>
+      </div>
         <!-- 2 column grid layout with text inputs for the first and last names -->
         <div class="row">
           <div class="col-md-6 mb-4">

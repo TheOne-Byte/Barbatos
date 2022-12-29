@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
-    public function product_detail($id ){
-       $categories = Category::all();
-       $product = Product::find($id);
+    public function product_detail($index ){
+       $category = Category::all();
+       $product = Product::find($index);
        return view('ProductDetail', compact('Category', 'product'));
     }
 
