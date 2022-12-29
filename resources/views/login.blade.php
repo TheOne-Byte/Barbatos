@@ -1,100 +1,52 @@
-<!doctype html>
-<html lang="en">
+@extends('layout.Navbar')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.104.2">
-    <title>Barbatos | Login</title>
+@section('headings')
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous" defer>
-    </script>
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-        .b-example-divider {
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
-
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
-
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-    </style>
-</head>
-
-<body class="text-center">
-
-    <main class="form-signin w-100 m-auto">
-        <form>
-            <h1><b>Barbatos</b></h1>
-            <h1 class="h3 mb-3 fw-normal">Please log in</h1>
-
-            <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
+<div class="col-lg-6 mb-5 mb-lg-0">
+  <div class="card">
+    <div class="card-body py-5 px-md-5">
+      <form>
+      <div class="text">Login</div>
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="form-outline">
+              <input type="text" id="form3Example1" class="form-control" />
+              <label class="form-label" for="form3Example1">First name</label>
             </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Password</label>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="form-outline">
+              <input type="text" id="form3Example2" class="form-control" />
+              <label class="form-label" for="form3Example2">Last name</label>
             </div>
+          </div>
+        </div>
 
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
-            </div>
-            <button class="w-100 btn btn-lg btn-dark" type="submit">Log in</button>
-            <p class="mt-2 mb-3 text-muted">Or</p>
-            <a href="/register">Register</a>
-        </form>
-    </main>
-</body>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form3Example3" class="form-control" />
+          <label class="form-label" for="form3Example3">Email address</label>
+        </div>
 
-</html>
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form3Example4" class="form-control" />
+          <label class="form-label" for="form3Example4">Password</label>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-check d-flex justify-content-center mb-4">
+          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+          <label class="form-check-label" for="form2Example33">
+            Remember me
+          </label>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">
+          Sign up
+        </button>
+
+@endsection
