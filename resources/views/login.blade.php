@@ -2,8 +2,10 @@
 
 @section('headings')
 
+
 <div class = "d-flex justify-content-center align-item-center pt-5 mt-5">
  <div class="col-lg-6 mb-5 mb-lg-0  justify-content mx-auto">
+
   <div class="card">
     <div class="card-body py-5 px-md-5">
       <form>
@@ -50,5 +52,6 @@
         <button type="submit" class="btn btn-primary btn-block mb-4">
           Sign up
         </button>
+
 </div>
 @endsection

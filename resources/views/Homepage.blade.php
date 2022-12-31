@@ -3,12 +3,10 @@
 
 
 @section('headings')
+
 @foreach ($categories as $category) //Ini untuk buat category kayak di soal
     <div class="card-deck">
         @foreach ( as ) // ini untuk looping product dari category
-
-
-
     <div class="card">
       <img class="card-img-top" src="..." alt="Card image cap">
       <div class="card-body">
@@ -17,9 +15,9 @@
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
+
   </div>
          @endforeach
 @endforeach
-
 
 @endsection
