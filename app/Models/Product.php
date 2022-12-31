@@ -9,4 +9,10 @@ class Product extends Model
 {
     protected $id = 'id';
     public $fillable = ['category_id','name','description','price', 'image'];
+
+    public function Cateogryrelation(){
+        return $this->belongsTo(Category::class, 'category_id');
+    }
 }
+
+

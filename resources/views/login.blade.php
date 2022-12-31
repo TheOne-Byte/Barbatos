@@ -3,7 +3,9 @@
 @section('headings')
 
 
-<div class="col-lg-6 mb-5 mb-lg-0">
+<div class = "d-flex justify-content-center align-item-center pt-5 mt-5">
+ <div class="col-lg-6 mb-5 mb-lg-0  justify-content mx-auto">
+
   <div class="card">
     <div class="card-body py-5 px-md-5">
       <form>
@@ -39,7 +41,7 @@
         </div>
 
         <!-- Checkbox -->
-        <div class="form-check d-flex justify-content-center mb-4">
+        <div class="form-check d-flex justify-content mb-4">
           <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
           <label class="form-check-label" for="form2Example33">
             Remember me
@@ -51,4 +53,5 @@
           Sign up
         </button>
 
+</div>
 @endsection
