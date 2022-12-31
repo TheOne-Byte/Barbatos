@@ -9,4 +9,8 @@ class Category extends Model
 {
     protected $id = 'id';
     public $fillable = ['name'];
+
+    public function Productrelation(){
+        return $this->hasMany(Product::class);
+    }
 }

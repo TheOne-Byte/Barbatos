@@ -24,4 +24,4 @@ Route::get('/Homepage', [HomepageController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'index']);
 
-Route::get('/ProductDetail', [ProductController::class, 'product_detail']);
+Route::get('/ProductDetail/{id}', [ProductController::class, 'product_detail']);
