@@ -22,6 +22,11 @@ Route::get('/', function () {
 
 Route::get('/Homepage', [HomepageController::class, 'index']);
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'showLogin']);
+Route::post('/login', [LoginController::class,'userLogin']);
+Route::get('/register', [LoginController::class,'showRegistration']);
+Route::post('/register',[LoginController::class,'userRegister']);
+
+
 
 Route::get('/ProductDetail/{id}', [ProductController::class, 'product_detail']);
