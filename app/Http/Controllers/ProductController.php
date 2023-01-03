@@ -16,5 +16,11 @@ class ProductController extends Controller
         return view('ProductDetail', ['products' => $products, 'categories' => $categories]);
     }
 
+    public function CategoryDetailPage($id){
+        $products = Product::find($id);
+        $categories = $products->Categoryrelation;
+        return view('ProductbyCategory',['products' => $products, 'categories' => $categories]);
+    }
+
 
 }

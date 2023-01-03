@@ -21,12 +21,12 @@ class CategorySeeder extends Seeder
         );
 
         DB::table('categories')->insert([
-            'name' => 'Elektronik'
+            'name' => 'Buku'
         ]
         );
 
         DB::table('categories')->insert([
-            'name' => 'Buku'
+            'name' => 'Elektronik'
         ]
         );
     }

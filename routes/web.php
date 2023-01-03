@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +32,10 @@ Route::post('/register',[LoginController::class,'userRegister']);
 
 
 Route::get('/ProductDetail/{id}', [ProductController::class, 'product_detail']);
+Route::get('/ProductbyCategory/{index}', [CategoryController::class, 'category']);
+
+
+Route::get('/AddProduct', [CategoryController::class, 'dropdownCategory']);
+
+// masih ngak bisa karena belum buat koneksinya ke user
+Route::get('/Profilepage', [CategoryController::class, 'dropdownCategory']);
