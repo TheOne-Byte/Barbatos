@@ -4,20 +4,23 @@
 
 @section('headings')
 
-@foreach ($categories as $category) //Ini untuk buat category kayak di soal
-    <div class="card-deck">
-        @foreach ( as ) // ini untuk looping product dari category
-    <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
+@foreach ($categories as $category)
+<h5>{{ $category -> name }} </h5>     <a href="/ProductbyCategory/{{ $category -> id }}" class="card-link">View Category</a>
+<div class="d-flex" style="overflow-x: scroll; px-5">
+    @foreach ($products as $product)
+        @if ($category->id == $product->category_id)
+        <div class = ""  >
+            <img src="{{ asset($product->image) }}" class="img-fluid rounded-start;" alt="..." style="width: 400px; height:400px; px-5;">
+            <div class="card-body">
+                <h5 class="card-title">{{ $product->name }}</h5>
+                <p class="card-text"><small class="text-muted">Rp. {{ $product->price }}</small></p>
+                <a href='/ProductDetail/{{$product -> id}}' class="btn btn-primary">Product Detail</a>
+            </div>
+        </div>
+        @endif
 
-  </div>
-         @endforeach
+    @endforeach
+</div>
 @endforeach
 
 @endsection

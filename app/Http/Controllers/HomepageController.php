@@ -8,9 +8,10 @@ use Illuminate\Http\Request;
 
 class HomepageController extends Controller
 {
-    public function product_detail(){
+    public function index(){
+        $categories = Category::all();
         $products = Product::all();
-        return view('Homepage', ['products' => $products]);
+        return view('Homepage', ['categories' => $categories, 'products' => $products]);
     }
 
 }
