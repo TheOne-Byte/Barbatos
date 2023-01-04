@@ -8,19 +8,12 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function catergory($index){
+    public function category($index){
+        $categories = Category::all();
         $categoryName =Category::find($index);
-        $category = Product::find($index)->where('category_id','=',$index)->leftjoin('products','products.category_id','=','categories.category_id')->get();
+        $category = Product::find($index)->where('category_id','=',$index)->leftjoin('categories','products.category_id','=','categories.id')->get();
 
-        return view('ProductbyCategory',['category'=>$category,'categoryName'=>$categoryName]);
+        return view('ProductbyCategory',['category'=>$category,'categoryName'=>$categoryName, 'categories' => $categories]);
     }
-
-    public function dropdownCategory($index){
-        $categoryName =Category::get($index);
-
-        return view('AddProduct',['categoryName'=>$categoryName]);
-    }
-
-
 
 }

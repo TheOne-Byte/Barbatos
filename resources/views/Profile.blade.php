@@ -1,29 +1,17 @@
 @extends('layout.Navbar')
 
 @section('headings')
-    <div class="Container-fluid">
-        <div class="col-12">
-            <label class="form-label">Name</label><br>
-            <input type="text" class="form-control" value="{{ $user->name }}" name="name" readonly>
+        <div class="Container-fluid">
+                <div class="">
+                <table class="table">
+                    <tbody>
+                        <tr><td>Name: {{$users->name}}</td></tr>
+                        <tr><td>Email: {{$users->email}}</td></tr>
+                        <tr><td>Gender: {{$users->gender}}</td></tr>
+                        <tr><td>Date Of Birth: {{$users->DoB}} </td></tr>
+                        <tr><td>Country: {{$users->country}}</td></tr>
+                    </tbody>
+                </table>
+                </div>
         </div>
-        <div class="col-12">
-            <label class="form-label">Email</label><br>
-            <input type="text" class="form-control" value="{{ $user->email }}" name="email" readonly>
-        </div>
-
-        <div class="col-12">
-            <label class="form-label">Gender</label><br>
-            <input type="text" class="form-control" value="{{ $user->gender }}" name="gender" readonly>
-        </div>
-
-        <div class="col-12">
-            <label class="form-label">Date Of Birth</label>
-            <input type="date" class="form-control" value="{{ $user->DoB }}" name="DoB" readonly>
-        </div>
-
-        <div class="col-12">
-            <label class="form-label">Country</label><br>
-            <input type="text" class="form-control" value="{{ $user->country }}" name="country" readonly>
-
-        </div>
-    @endsection
+@endsection

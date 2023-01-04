@@ -8,11 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $id = 'id';
-    public $fillable = ['category_id','name','description','price', 'image'];
-
-    public function Cateogryrelation(){
+    public $fillable = [
+        'category_id',
+        'name',
+        'description',
+        'price', 
+        'image',
+    ];
+    public function Categoryrelation(){
         return $this->belongsTo(Category::class, 'category_id');
     }
+    public function Transactionrelation(){
+        return $this->belongsTo(Transaction::class);
+    }
+    
+    public $timestamps = false;
 }
 
 

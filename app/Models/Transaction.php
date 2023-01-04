@@ -9,4 +9,9 @@ class Transaction extends Model
 {
     protected $key = 'id';
     public $fillable = ['product_id','quantity', 'sub_price'];
+
+    public function product(){
+        return $this->hasMany(Product::class);
+    }
+    public $timestamps = false;
 }

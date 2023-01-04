@@ -45,9 +45,9 @@
             Log in
            </button>
            <p>Dont have account?</p>
-           <button type="submit" class="btn btn-primary btn-block mb-4">
+           <a href="/register" class="btn btn-primary btn-block mb-4">
              Sign Up
-            </button>
+            </a>
 
             @if ($errors->any())
                     <div class="alert alert-danger">

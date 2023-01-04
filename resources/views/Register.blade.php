@@ -11,7 +11,7 @@
       <div class="card">
         <div class="card-body py-5 px-md-5">
           <div class="text mt-2">
-            <h2>Register</h2>
+          <h2>Register</h2>
           </div>
 
             <!-- Name input -->
@@ -37,7 +37,7 @@
             
             <!-- Confirm Password input -->
             <div class="form-outline mb-4">
-              <input type="password" id="confirmUserPass" class="form-control" />
+              <input type="password" name="confirmUserPass" id="confirmUserPass" class="form-control" />
               <label class="form-label" for="confirmUserPass">Confirm Password</label>
             </div>
 
@@ -82,7 +82,6 @@
                         </ul>
                     </div>
               @endif
-
         </div>
       </div>
     </div>
