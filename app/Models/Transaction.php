@@ -11,7 +11,7 @@ class Transaction extends Model
     public $fillable = ['product_id','quantity', 'sub_price'];
 
     public function product(){
-        return $this->hasMany(Product::class);
+        return $this->hasOne(Product::class,'product_id');
     }
     public $timestamps = false;
 }

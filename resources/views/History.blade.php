@@ -1,30 +1,26 @@
 @extends('layout.Navbar')
 
 @section('headings')
+    <div class="container-fluid" style="0 25%;">
 
-<div class="container-fluid" style="0 25%;">
-    @foreach ($transactions as $transactions)
-        <div class="">
-            <table>
+        <table class="table">
+            <thead class="thead-dark">
                 <tr>
-                    <th>Name</th>
-                    <th>Quantity</th>
-                    <th>Sub Price</th>
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Sub_price</th>
                 </tr>
-                <tr>
-                        <td>{{$transactions->product->name}}</td>
-                        <td>{{$transactions->quantity}}</td>
-                        <td>{{$transactions->product->price}}</td>
-                </tr>
-                <tr>
-                    <td>Total</td>
-                    <td>{{$total_quantity}} item(s)</td>
-                    <td>Rp. {{$total_price}}</td>
-                </tr>
-            </table>
-        </div>
-    @endforeach
-</div>
-
-
+            </thead>
+            @foreach ($transactions as $transaction)
+                <tbody>
+                    <tr>
+                        <th scope="row">{{ $transaction->id }}</th>
+                        <td>{{ $transaction->name }}</td>
+                        <td>{{ $transaction->quantity }}</td>
+                        <td>{{ $transaction->sub_price }}</td>
+                    </tr>
+                </tbody>
+            @endforeach
+    </div>
 @endsection

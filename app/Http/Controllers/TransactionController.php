@@ -9,13 +9,13 @@ use Illuminate\Http\Request;
 class TransactionController extends Controller
 {
     public function ShoppingCart(){
-        $cart = Transaction::all();
-        
+        $carts = Transaction::all();
+        // dd($carts);
         $total_price = 0;
-        foreach($cart as $cart){
+        foreach($carts as $cart){
             $total_price += $cart->sub_price;
         }
-        return view('CartPage', compact('cart', 'total_price'));
+        return view('CartPage', compact('carts', 'total_price'));
     }
 
     public function delete($id)

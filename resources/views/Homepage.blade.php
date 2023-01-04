@@ -16,8 +16,8 @@
         <a href="/ProductbyCategory/{{ $category -> id }}" class="card-link">View Category</a>
         <div class="d-flex" style="overflow-x: scroll; px-5">
             @foreach ($category->Productrelation as $product)
-                <div class = ""  >
-                    <img src="{{ asset($product->image) }}" class="img-fluid rounded-start;" alt="..." style="width: 400px; height:400px; px-5;">
+                <div class = "card mr-5"  >
+                    <img class="card-img-top" src="{{ asset($product->image) }}" alt="Card Image Cap" style="width: 400px; height:400px; px-5;">
                     <div class="card-body">
                         <h5 class="card-title">{{ $product->name }}</h5>
                         <p class="card-text"><small class="text-muted">Rp. {{ $product->price }}</small></p>

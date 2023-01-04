@@ -59,7 +59,7 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth', 'CheckRole:customer'])->group(function () {
     Route::get('/History', [TransactionController::class, 'history']);
     Route::get('/CartPage',[TransactionController::class,'ShoppingCart']);
-    Route::get('/deletecart/{id}', [CartController::class, 'delete']);
+    Route::get('/deletecart/{id}', [TransactionController::class, 'delete']);
 });
 
 // Route::get('/AddProduct', [CategoryController::class, 'dropdownCategory']);
