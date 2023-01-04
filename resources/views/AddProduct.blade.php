@@ -28,31 +28,34 @@
                                 @endforeach
                             </select>
                         </div>
+
+                        <!-- Detail input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="detail">Detail</label>
+                            <input type="detail" name="detail" id="detail" class="form-control" />
+                            
+                        </div>
+
+                        <!-- Price  input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="price">Price</label>
+                            <input type="price" name="price" id="price" class="form-control" />
+                        </div>
+
+                        <!-- Picture input -->
+                        <div class="form-outline mb-4">
+                            <label for="image">Photo</label><br>
+                            <input id="image" type="file" class="form-control" name="image">
+                        </div>
+
+                        <!-- Register button -->
+                        <button type="submit" class="btn btn-lg btn-primary register-btn mb-4">
+                            submit
+                        </button>
                     </div>
 
 
-                    <!-- Detail input -->
-                    <div class="form-outline mb-4">
-                        <input type="detail" name="detail" id="detail" class="form-control" />
-                        <label class="form-label" for="detail">detail</label>
-                    </div>
 
-                    <!-- Price  input -->
-                    <div class="form-outline mb-4">
-                        <input type="price" name="price" id="price" class="form-control" />
-                        <label class="form-label" for="price">price</label>
-                    </div>
-
-                    <!-- Picture input -->
-                    <div class="form-outline mb-4">
-                        <label for="image">Photo</label><br>
-                        <input id="image" type="file" class="form-control" name="image">
-                    </div>
-
-                    <!-- Register button -->
-                    <button type="submit" class="btn btn-lg btn-primary register-btn mb-4">
-                        submit
-                    </button>
 
                     @if ($errors->any())
                         <div class="alert alert-danger">
